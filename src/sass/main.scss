@@ -343,7 +343,7 @@ a.logo {
 	&__box {
 		float: left;
 		width: 33.3%;
-		padding: 0 2.30%;
+		padding: 0 2.30% 37px 2.30%;
 	}
 	&__title {
 		background: #f8f8f8;
@@ -407,6 +407,104 @@ a.logo {
 	}
 
 }
+
+.catalog {
+	&__title {
+		border-top: 1px solid #f2f2f2;
+		padding: 29px 0 27px 0;
+	}
+	.owl-nav {
+	  [class*='owl-'] {top: 109px;}
+	}
+	&__box {
+		padding: 0 0 18px 0;
+	}
+	&__link:link,&__link:visited {
+		display: block;
+		color: #262626;
+	}
+	&__link:hover,&__link:active,&__link:focus {
+		text-decoration: none;
+	}
+	&__pic {
+		position: relative;
+	}
+	&__discount {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		width: 46px;
+		line-height: 46px;
+		height: 46px;
+		color: #fff;
+		@include border-radius(50%);
+		background: #e45555;
+		text-align: center;
+		font-style: normal;
+		font: {
+			family: 'HelveticaNeueCyr-Medium';
+		    size: 14px;
+		}
+	}
+	&__desc {
+		font: {
+			family: 'HelveticaNeueCyr-Roman';
+		    size: 14px;  
+		}
+		padding: 7px 0 13px 0;
+	}
+	&__name {
+		font-size: 13px;
+		color: #b2b2b2;
+		margin-bottom: 4px;
+	}
+	&__price {
+		font: {
+			family: 'HelveticaNeueCyr-Roman';
+		    size: 14px;  
+		}
+		&--old {
+			text-decoration: line-through;
+		}
+		&--new {
+			color: #e45555;
+		}
+	}
+}
+
+
+.partners {
+	border: 1px solid #f2f2f2;
+	border-left-color: #fff;
+	border-right-color: #fff;
+	&__box {
+		padding: 50px 0;
+		> a {
+			text-decoration: none;
+			display: block;
+			opacity: 0.5;
+			&:before {
+				content: "";
+				display: inline-block;
+				min-height: inherit;
+				height: 100%;
+				vertical-align: middle;
+			}
+			img {
+				display: inline-block;
+				vertical-align: middle;
+				filter: grayscale(100%);
+			}
+			&:hover {
+				opacity: 1.0;
+				img {
+					filter: grayscale(0);
+				}
+			}
+		}
+	}
+}
+
 
 
 

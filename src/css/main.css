@@ -408,7 +408,7 @@ a.logo {
 .benefits__box {
   float: left;
   width: 33.3%;
-  padding: 0 2.30%; }
+  padding: 0 2.30% 37px 2.30%; }
 
 .benefits__title {
   background: #f8f8f8;
@@ -459,5 +459,86 @@ a.logo {
   font-size: 15px;
   color: #828282;
   line-height: 1.6; }
+
+.catalog__title {
+  border-top: 1px solid #f2f2f2;
+  padding: 29px 0 27px 0; }
+
+.catalog .owl-nav [class*='owl-'] {
+  top: 109px; }
+
+.catalog__box {
+  padding: 0 0 18px 0; }
+
+.catalog__link:link, .catalog__link:visited {
+  display: block;
+  color: #262626; }
+
+.catalog__link:hover, .catalog__link:active, .catalog__link:focus {
+  text-decoration: none; }
+
+.catalog__pic {
+  position: relative; }
+
+.catalog__discount {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 46px;
+  line-height: 46px;
+  height: 46px;
+  color: #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #e45555;
+  text-align: center;
+  font-style: normal;
+  font-family: 'HelveticaNeueCyr-Medium';
+  font-size: 14px; }
+
+.catalog__desc {
+  font-family: 'HelveticaNeueCyr-Roman';
+  font-size: 14px;
+  padding: 7px 0 13px 0; }
+
+.catalog__name {
+  font-size: 13px;
+  color: #b2b2b2;
+  margin-bottom: 4px; }
+
+.catalog__price {
+  font-family: 'HelveticaNeueCyr-Roman';
+  font-size: 14px; }
+  .catalog__price--old {
+    text-decoration: line-through; }
+  .catalog__price--new {
+    color: #e45555; }
+
+.partners {
+  border: 1px solid #f2f2f2;
+  border-left-color: #fff;
+  border-right-color: #fff; }
+  .partners__box {
+    padding: 50px 0; }
+    .partners__box > a {
+      text-decoration: none;
+      display: block;
+      opacity: 0.5; }
+      .partners__box > a:before {
+        content: "";
+        display: inline-block;
+        min-height: inherit;
+        height: 100%;
+        vertical-align: middle; }
+      .partners__box > a img {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%); }
+      .partners__box > a:hover {
+        opacity: 1.0; }
+        .partners__box > a:hover img {
+          -webkit-filter: grayscale(0);
+                  filter: grayscale(0); }
 
 /* RESPONSIVE */
