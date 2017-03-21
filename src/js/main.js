@@ -3,10 +3,10 @@ $(function() {
 	/*********************************************************/
 						/* START CURRENCIES DROP-DOWN LIST  */
 	/********************************************************/
-			$('.slider').owlCarousel({
+			$('#slider').owlCarousel({
                 center: false,
                 items: 1.5,
-                loop: false,
+                loop: true,
                 margin: 0,
                 nav:true,
                 dots: false,
