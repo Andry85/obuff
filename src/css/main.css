@@ -772,6 +772,169 @@ a.logo {
   border-bottom: 1px solid #f2f2f2;
   margin-bottom: 316px; }
 
+/* CATALOG PAGE */
+.container {
+  float: left;
+  width: 100%; }
+
+.page {
+  margin: 0 0 0 231px;
+  padding: 24px 0 0 0; }
+  .page__title {
+    border-bottom: 1px solid #b3b3b3;
+    padding: 0 0 13px 0;
+    font-family: 'HelveticaNeueCyr-Medium';
+    font-size: 21px;
+    margin: 6px 0; }
+    .page__title:before, .page__title:after {
+      content: "";
+      display: table; }
+    .page__title:after {
+      clear: both; }
+  .page__count {
+    color: #b2b2b2;
+    float: left;
+    padding: 3px 0 0 14px; }
+  .page__name {
+    margin: 0;
+    float: left; }
+
+.sidebar {
+  padding: 24px 0 0 0;
+  float: left;
+  margin-left: -100%;
+  position: relative;
+  width: 200px; }
+  .sidebar__title {
+    border-bottom: 1px solid #b3b3b3;
+    padding: 0 0 13px 0;
+    margin: 6px 0 12px 0;
+    font-family: 'HelveticaNeueCyr-Medium';
+    font-size: 21px;
+    line-height: 1.4; }
+
+.categories {
+  font-family: 'HelveticaNeueCyr-Roman';
+  font-size: 13px;
+  padding: 0 0 3px 0; }
+  .categories__title {
+    text-transform: uppercase;
+    font-family: 'HelveticaNeueCyr-Roman';
+    font-size: 13px; }
+
+.submenu {
+  padding: 0 20px 0 8px; }
+  .submenu__item {
+    padding: 10px 0 9px 0; }
+    .submenu__item > a {
+      text-decoration: underline;
+      position: relative;
+      display: block;
+      padding: 0 10px 0 0; }
+      .submenu__item > a:before {
+        content: "";
+        background: url(../img/mx.png) -100px -213px no-repeat;
+        width: 10px;
+        height: 6px;
+        position: absolute;
+        right: 0;
+        top: 5px; }
+    .submenu__item > a.activ:before {
+      background-position: -100px -207px; }
+    .submenu__item ul {
+      padding: 5px 0 0 10px; }
+      .submenu__item ul li {
+        padding: 4px 10px 5px 0; }
+        .submenu__item ul li a:hover {
+          text-decoration: none; }
+        .submenu__item ul li.cur a {
+          color: #262626; }
+  .submenu__count {
+    font-style: normal;
+    color: #b2b2b2;
+    padding: 0 0 0 7px; }
+
+.sort {
+  margin: 11px 0 0 0;
+  font-family: 'HelveticaNeueCyr-Roman';
+  font-size: 13px;
+  float: right; }
+  .sort__title {
+    float: left; }
+  .sort__item {
+    float: left;
+    padding: 0 0 0 12px;
+    position: relative; }
+  .sort__text {
+    padding: 0 20px 0 0;
+    position: relative;
+    cursor: pointer; }
+    .sort__text:before {
+      content: "";
+      background: url(../img/mx.png) -100px -219px no-repeat;
+      width: 10px;
+      height: 6px;
+      position: absolute;
+      right: 0;
+      top: 5px; }
+  .sort__list {
+    display: none;
+    padding: 3px;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #cbcbcb;
+    white-space: nowrap;
+    top: 120%;
+    left: 0;
+    -webkit-box-shadow: 0 -2px 8px 1px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 -2px 8px 1px rgba(0, 0, 0, 0.25); }
+  .sort__it {
+    cursor: pointer;
+    position: relative;
+    padding: 4px 20px; }
+    .sort__it i {
+      position: absolute;
+      left: 2px;
+      top: 6px;
+      font-size: 10px;
+      display: none; }
+    .sort__it:hover {
+      background: #849dfa;
+      color: #fff; }
+
+.filter {
+  padding: 8px 0 0 0; }
+  .filter:before, .filter:after {
+    content: "";
+    display: table; }
+  .filter:after {
+    clear: both; }
+  .filter__title {
+    float: left;
+    font-family: 'HelveticaNeueCyr-Bold';
+    padding: 0 15px 0 0; }
+  .filter__item {
+    float: left;
+    font-family: 'HelveticaNeueCyr-Roman';
+    padding: 0 22px 0 0; }
+  .filter__name {
+    padding: 0 21px 0 0;
+    position: relative;
+    cursor: pointer;
+    color: #828282; }
+    .filter__name:before {
+      content: "";
+      background: url(../img/mx.png) -100px -213px no-repeat;
+      width: 10px;
+      height: 6px;
+      position: absolute;
+      right: 0;
+      top: 5px; }
+    .filter__name:hover {
+      color: #262626; }
+      .filter__name:hover:before {
+        background-position: -100px -219px; }
+
 /* FOOTER */
 .footer {
   border-top: 1px solid #f2f2f2; }

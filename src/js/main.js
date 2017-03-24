@@ -81,6 +81,39 @@ $(function() {
 
 
 
+	/*********************************************************/
+						/* Start MENU ACCARDION  */
+	/********************************************************/
+	$('.submenu > li > a').click(function(event) {
+		event.preventDefault();
+        $(this).next('ul').slideToggle(500);
+        $(this).parent().siblings().children('ul').slideUp(500);
+        $(this).parent().siblings().children('ul').prev('a').removeClass("activ");
+        $(this).toggleClass("activ");
+    }).next('ul').hide();
+    /*********************************************************/
+						/* End MENU ACCARDION  */
+	/********************************************************/ 
+
+
+	/*********************************************************/
+						/* Start SORT POPAP  */
+	/********************************************************/
+		$( ".sort__text" ).click(function() {
+		  $(this).next('ul').slideToggle(500);
+		});
+		$( ".sort__it" ).click(function() {
+		  $(this).children("i").show();
+		  $(this).siblings().children("i").hide();
+		  $(this).parent("ul").slideUp(500);
+		  var sortText = $(this).children("span").text();
+		  $(".sort__text" ).text(sortText);
+		});
+	/*********************************************************/
+						/* End SORT POPAP  */
+	/********************************************************/ 
+
+
 	
 
 	
