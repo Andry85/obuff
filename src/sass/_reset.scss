@@ -77,7 +77,10 @@ textarea {
     -moz-appearance: none;
     appearance: none; 
 }
-textarea {resize: vertical;}
+textarea {
+	resize: vertical;
+	height: auto;
+}
 
 input[type=text]:hover,
 input[type=password]:hover,
