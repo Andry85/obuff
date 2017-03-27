@@ -29,9 +29,9 @@
 	background: #fff;
 	color: #444;
 	text-shadow: none;
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-	        border-radius: 4px;
+	border: 1px solid #dbdbdb;
+	padding: 0!important;
+
 }
 
 .fancybox-opened {
@@ -98,14 +98,17 @@
 }
 
 .fancybox-close {
+	background: url(../img/mx.png) -300px -200px no-repeat;
 	position: absolute;
-	top: -18px;
-	right: -18px;
-	width: 36px;
-	height: 36px;
+	top: 10px;
+	right: 10px;
+	width: 10px;
+	height: 10px;
 	cursor: pointer;
 	z-index: 8040;
+	opacity: 0.5;
 }
+.fancybox-close:hover {opacity: 1;}
 
 .fancybox-nav {
 	position: absolute;

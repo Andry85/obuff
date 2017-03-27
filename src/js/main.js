@@ -156,9 +156,29 @@ $(function() {
 						/* START FANCYBOX  */
 	/********************************************************/
 		$(".order__link--login").fancybox();
+		$(".formRegFooter__link").fancybox();
+		$(".forgot").fancybox();
+		$(".backPass").fancybox();
+		$(".addTocart").fancybox();
+		$(".sendLetter").fancybox();
 	/*********************************************************/
 						/* END FANCYBOX */
 	/********************************************************/
+	
+
+	/*********************************************************/
+						/* START HINT  */
+	/********************************************************/
+		$(".hint__icon").mouseenter(function() {
+		  $(this).next('.hint__desc').fadeIn("fast");
+		});
+		$(".hint__icon").mouseleave(function() {
+		  $(this).next('.hint__desc').fadeOut("fast");
+		});
+	/*********************************************************/
+						/* END HINT */
+	/********************************************************/
+
 
 
 	

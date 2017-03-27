@@ -2,20 +2,13 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>myacc</title>
+<title>shoppingcart</title>
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<!--build:css css/main.css-->
-<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/owl.carousel.css">
-<link rel="stylesheet" href="css/fontawesome.css">
-<link rel="stylesheet" href="css/select2.css">
-<link rel="stylesheet" href="css/jquery.fancybox.css">
-<!--endbuild-->
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -95,15 +88,21 @@
 						<a href="#" title="">Главная</a>
 					</li>
 					<li class="patway__item">
-						<span>Личные данные</span>
+						<span>Корзина</span>
 					</li>
 				</ul>
 				<div class="cartWrap">
 					<div class="cartWrap__container">
 						<div class="cartWrap__page">
-							<div class="cartWrap__title">Личные данные</div>
+							<div class="cartWrap__title">Оформление заказа</div>
 							<div class="mainForm">
-								<form id="myaccount" method="post" action="#" name="myaccount">
+								<form id="form" method="post" action="#" name="form">
+									<div class="mainForm__row">
+										<label for="phone">Телефон</label>
+										<div class="mainForm__field">
+											<input class="telephone" type="tel" id="phone" name="phone" placeholder="+38 (___) ___-__-__">
+										</div>
+									</div>
 									<div class="mainForm__row">
 										<label for="fio">ФИО</label>
 										<div class="mainForm__field">
@@ -111,12 +110,6 @@
 											<span class="errorPrompt">
 												Проверьте написание и воспользуйтесь подсказкой
 											</span>
-										</div>
-									</div>
-									<div class="mainForm__row">
-										<label for="phone">Телефон</label>
-										<div class="mainForm__field">
-											<input class="telephone" type="tel" id="phone" name="phone" placeholder="+38 (___) ___-__-__">
 										</div>
 									</div>
 									<div class="mainForm__row">
@@ -132,25 +125,80 @@
 										</div>
 									</div>
 									<div class="mainForm__row">
-										<label for="password">Пароль</label>
+										<label>Служба доставки</label>
 										<div class="mainForm__field">
-											<input type="password" id="password" name="password" placeholder="************">
+											<div class="chosen-wrap">
+				                                <select class="classic-select" style="width: 100%">
+				                                    <option selected="selected" value="0">Новая Почта</option>
+				                                    <option value="1">1</option>
+				                                    <option value="2">2</option>
+				                                    <option value="3">3</option>
+				                                </select>
+				                            </div>
 										</div>
 									</div>
 									<div class="mainForm__row">
-										<label for="passwordRepeat">Пароль еще раз</label>
+										<label>Отделение Новой Почты</label>
 										<div class="mainForm__field">
-											<input type="password" id="passwordRepeat" name="passwordRepeat" placeholder="************">
+											<div class="chosen-wrap">
+				                                <select class="classic-select" style="width: 100%">
+				                                    <option selected="selected" value="0">№34: ул. Ташкентская, 60 (м. Бориспольская)</option>
+				                                    <option value="1">1</option>
+				                                    <option value="2">2</option>
+				                                    <option value="3">3</option>
+				                                </select>
+				                            </div>
 										</div>
 									</div>
 									<div class="mainForm__row">
-										<div class="mainForm__field mainForm__field--colspan">
-											<button type="submit" class="bnt bnt--save" form="myaccount">Сохранить</button>
+										<label>Вариант оплаты</label>
+										<div class="mainForm__field">
+											<div class="chosen-wrap">
+				                                <select class="classic-select" style="width: 100%">
+				                                    <option selected="selected" value="0">Наложенный платеж</option>
+				                                    <option value="1">1</option>
+				                                    <option value="2">2</option>
+				                                    <option value="3">3</option>
+				                                </select>
+				                            </div>
 										</div>
+									</div>
+									<div class="mainForm__row">
+										<label>Комментарий</label>
+										<div class="mainForm__field">
+											<textarea placeholder="Вы можете указать второй намер телефона. он поможет службе доставки связаться с вами, если указанный выше номер будет
+недоступен, и избежать задержки при доставке вашего заказа."></textarea>
+										</div>
+									</div>
+									<div class="orderCart">
+										<div class="orderCart__col1">
+											<div class="orderCart__inner">
+												<div class="orderCart__title">Итого: 3 товара на сумму 4 650 грн.</div>
+												<p class="orderCart__text">Нажимая на кнопку "Оформить заказ", вы принимаете<br> условия <a href="#" title="">Публичной оферты</a></p>
+												<p class="orderCart__call">Заказывайте 3 пары обуви и более - Доставка бесплатно!</p>
+											</div>	
+										</div>
+										<div class="orderCart__col2">
+											<ul class="orderList">
+												<li class="orderList__item">
+													<span>Подытог:</span>
+													<i>4 650 грн.</i>
+												</li>
+												<li class="orderList__item">
+													<span>Доставка:</span>
+													<i class="orderList__delivery">Бесплатно</i>
+												</li>
+												<li class="orderList__item orderList__item--summ">
+													<span>Итого:</span>
+													<i>4 650 грн.</i>
+												</li>
+											</ul>
+											<button type="submit" class="bnt bnt--delivery" form="form">Оформить заказ</button>
+										</div>	
 									</div>
 									<div class="basket">
 										<div class="basket__title">
-											<div class="basket__colT1">Мой последний заказ</div>
+											<div class="basket__colT1">3 товара</div>
 											<div class="basket__colT2"><span>Кол-во</span></div>
 											<div class="basket__colT3"><span>Цена</span></div>
 										</div>
@@ -170,12 +218,15 @@
 													</div>
 													<div class="basketList__col2">
 														<div class="number">
-															<span class="number__ammount">2</span>
+															<a class="number__down" href="#" title="">-</a>
+															<input class="number__count" type="text" value='2'>
+															<a class="number__up" href="#" title="">+</a>
 														</div>
 													</div>
 													<div class="basketList__col3">
 														<p class="basketList__price">2 780 грн.</p>
 														<p class="basketList__ammount">1 390 грн. x 2 шт.</p>
+														<button type="submit" class="bnt bnt--delete">Удалить</button>
 													</div>
 												</li>
 												<li class="basketList__item">
@@ -192,39 +243,147 @@
 													</div>
 													<div class="basketList__col2">
 														<div class="number">
-															<span class="number__ammount">2</span>
+															<a class="number__down" href="#" title="">-</a>
+															<input class="number__count" type="text" value='1'>
+															<a class="number__up" href="#" title="">+</a>
 														</div>
 													</div>
 													<div class="basketList__col3">
 														<p class="basketList__price">1 380 грн.</p>
+														<button type="submit" class="bnt bnt--delete">Удалить</button>
 													</div>
 												</li>
 											</ul>
 										</div>
 									</div>
-									<div class="booking">
-										<div class="booking__title">Заказ №3855 на сумму 4 650 грн.</div>
-										<button type="submit" class="bnt bnt--history">История заказов</button>
-									</div>	
 								</form>
 							</div>
 						</div>
 					</div>
 					<div class="cartWrap__sidebar">
-						<div class="cartWrap__title">Мой кабинет</div>
-						<ul class="officeList">
-							<li class="officeList__item officeList__item--activ">
-								<a href="#" title="">Личные данные</a>
-							</li>
-							<li class="officeList__item">
-								<a href="#" title="">История заказов</a>
-							</li>
-							<li class="officeList__item">
-								<a href="#" title="">Выйти</a>
-							</li>
-						</ul>
+						<div class="benefits">
+							<div class="benefits__box">
+								<div class="benefits__title">
+									<a class="benefits__link" href="#" title="">
+										<span class="ic__delivery"></span>
+									</a>
+								</div>
+								<div class="benefits__entry">
+									<h3>Доставка Новой Почтой по Украине</h3>
+									<p>Мы гарантируем, что ваш заказ будет доставлен в любую точку Украины в течении 4-6 рабочий дней. При заказе от 1000 грн доставка бесплатно</p>
+								</div>
+							</div>
+							<div class="benefits__box">
+								<div class="benefits__title">
+									<a class="benefits__link" href="#" title="">
+										<span class="ic__drop"></span>
+									</a>
+								</div>
+								<div class="benefits__entry">
+									<h3>Dropshipping на выгодных условиях</h3>
+									<p>Вы ищете покупателя, размещая информацию о товаре. Заказы и оплату передаёте нам, мы сами
+		заботимся об упаковке, и пересылке товара покупателю</p>
+								</div>
+							</div>
+							<div class="benefits__box">
+								<div class="benefits__title">
+									<a class="benefits__link" href="#" title="">
+										<span class="ic__brands"></span>
+									</a>
+								</div>
+								<div class="benefits__entry">
+									<h3>Качественные товары известных брендов</h3>
+									<p>Мы гарантируем качество и подлинность каждой вещи, которую вы у нас купите. У вас всегда есть 14 дней, чтобы вернуть товар и получить деньги обратно</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="catalogWrap">
+					<section class="catalog">
+						<h2 class="catalog__title catalog__title--noBorder">Рекомендуем</h2>
+						<div class="catalog__entry">
+							<div class="catalog-slider owl-carousel">
+								<div class="item">
+					            	<div class="catalog__box">
+					            		<a class="catalog__link" href="#" title="">
+					            			<figure class="catalog__pic">
+					            				<img src="uploads/367x275-1.jpg" alt="" title="">
+					            			</figure>
+					            			<h3 class="catalog__desc">Зимние ботинки Shark B-150 W</h3>
+					            			<h4 class="catalog__name">Ботинки</h4>
+					            			<span class="catalog__price">1 270 грн.</span>
+					            		</a>
+					            	</div>
+					            </div>
+					            <div class="item">
+					            	<div class="catalog__box">
+					            		<a class="catalog__link" href="#" title="">
+					            			<figure class="catalog__pic">
+					            				<i class="catalog__discount">-15%</i>
+					            				<img src="uploads/367x275-2.jpg" alt="" title="">
+					            			</figure>
+					            			<h3 class="catalog__desc">Классические туфли Bonis 45 черные</h3>
+					            			<h4 class="catalog__name">Туфли</h4>
+					            			<span class="catalog__price catalog__price--old">1 270 грн.</span>
+					            			<span class="catalog__price catalog__price--new">1 050 грн.</span>
+					            		</a>
+					            	</div>
+					            </div>
+					            <div class="item">
+					            	<div class="catalog__box">
+					            		<a class="catalog__link" href="#" title="">
+					            			<figure class="catalog__pic">
+					            				<img src="uploads/367x275-3.jpg" alt="" title="">
+					            			</figure>
+					            			<h3 class="catalog__desc">Зимние ботинки Shark B-150 W</h3>
+					            			<h4 class="catalog__name">Ботинки</h4>
+					            			<span class="catalog__price">1 680 грн.</span>
+					            		</a>
+					            	</div>
+					            </div>
+					            <div class="item">
+					            	<div class="catalog__box">
+					            		<a class="catalog__link" href="#" title="">
+					            			<figure class="catalog__pic">
+					            				<img src="uploads/367x275-1.jpg" alt="" title="">
+					            			</figure>
+					            			<h3 class="catalog__desc">Зимние ботинки Shark B-150 W</h3>
+					            			<h4 class="catalog__name">Ботинки</h4>
+					            			<span class="catalog__price">1 270 грн.</span>
+					            		</a>
+					            	</div>
+					            </div>
+					            <div class="item">
+					            	<div class="catalog__box">
+					            		<a class="catalog__link" href="#" title="">
+					            			<figure class="catalog__pic">
+					            				<i class="catalog__discount">-15%</i>
+					            				<img src="uploads/367x275-2.jpg" alt="" title="">
+					            			</figure>
+					            			<h3 class="catalog__desc">Классические туфли Bonis 45 черные</h3>
+					            			<h4 class="catalog__name">Туфли</h4>
+					            			<span class="catalog__price catalog__price--old">1 270 грн.</span>
+					            			<span class="catalog__price catalog__price--new">1 050 грн.</span>
+					            		</a>
+					            	</div>
+					            </div>
+					            <div class="item">
+					            	<div class="catalog__box">
+					            		<a class="catalog__link" href="#" title="">
+					            			<figure class="catalog__pic">
+					            				<img src="uploads/367x275-3.jpg" alt="" title="">
+					            			</figure>
+					            			<h3 class="catalog__desc">Зимние ботинки Shark B-150 W</h3>
+					            			<h4 class="catalog__name">Ботинки</h4>
+					            			<span class="catalog__price">1 680 грн.</span>
+					            		</a>
+					            	</div>
+					            </div>
+							</div>
+						</div>
+					</section>
+				</div>	
 			</div>
 			
 			
@@ -531,16 +690,10 @@
     NECESSARY SCRIPTS
     =========================== -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<!--build:js js/libs.min.js -->
-		<script src="libs/placeholders.min.js"></script>
-		<script src="libs/select2.min.js"></script>
-		<script src="libs/owl.carousel.min.js"></script>
-		<script src="libs/jquery.validate.min.js"></script>
-		<script src="libs/jquery.mask.min.js"></script>
-		<script src="libs/jquery.mousewheel-3.0.6.pack.js"></script>
-		<script src="libs/jquery.fancybox.js"></script>
-	<!-- endbuild -->
+	<script src="js/libs.min.js"></script>
 	<script src="js/validate.call.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
+
+

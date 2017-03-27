@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/fontawesome.css">
 <link rel="stylesheet" href="css/select2.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
 <!--endbuild-->
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,14 +41,14 @@
 								<a class="topMenu__link" href="#" title="">Доставка и оплата</a>
 							</li>
 							<li class="topMenu__item">
-								<a class="topMenu__link" href="#" title="">Написать нам</a>
+								<a class="topMenu__link sendLetter" href="#letterForm" title="">Написать нам</a>
 							</li>
 						</ul>
 					</div>
 					<div class="header__col2">	
 						<ul class="order">
 							<li class="order__item">
-								<a class="order__link order__link--login" href="#" title="">Войти</a>
+								<a class="order__link order__link--login" href="#formReg" title="">Войти</a>
 							</li>
 							<li class="order__item order__item--activ">
 								<a class="order__link order__link--cart" href="#" title="">Корзина</a>
@@ -478,7 +479,7 @@
 	    							<a class="footerList__link" href="#" title="">Наши бренды</a>
 	    						</li>
 	    						<li class="footerList__item">
-	    							<a class="footerList__link" href="#" title="">Контакты</a>
+	    							<a class="footerList__link sendLetter" href="#letterForm" title="">Контакты</a>
 	    						</li>
 	    					</ul>
 	    				</div>
@@ -537,6 +538,224 @@
 
     </footer><!-- FOOTER SECTION END-->
 	<!-- ===========================
+    FOORM SECTION
+    =========================== -->
+		<div id="formReg" class="formReg">
+			<h3 class="formReg__title">Вход</h3>
+			<p class="formReg__authorize">Авторизируйтесь с помощью соц сетей</p>
+			<ul class="authorizeList">
+				<li>
+					<a href="#" title="">
+						<i class="vk-big"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="">
+						<i class="fb-big"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="">
+						<i class="google-big"></i>
+					</a>
+				</li>
+			</ul>
+			<div class="delimiter"><span>или</span></div>
+			<form id="authorize" action="#" method="POST" name="authorize">
+				<div class="formReg__row">
+					<input type="email" maxlength="50" name="formRegEmail" placeholder="E-mail" required>
+					<div class="hint">
+						<span class="hint__icon"></span>
+						<div class="hint__desc">E-mail, который вы увазываете при оформлении заказов на obuff.com.ua, является логином для входа на сайт.</div>
+					</div>
+				</div>
+				<div class="formReg__row">
+					<input name="formRpassword" type="password" placeholder="Пароль" required>
+					<a class="forgot" href="#forgotForm" title="">Не помните?</a>
+				</div>
+				<div class="formReg__row formReg__row--last">
+					<button type="submit" class="bnt" form="authorize">Войти</button>
+				</div>
+				<div class="formRegFooter">
+					<a class="formRegFooter__link" href="#newRegUser" title="">Регистрация нового пользователя</a>
+				</div>
+			</form>
+		</div>
+
+		<div id="newRegUser" class="formReg formReg--newRegUser">
+			<h3 class="formReg__title formReg__title--newRegUser">Регистрация</h3>
+			<form id="registration" action="#" method="POST" name="registration">
+				<div class="formReg__row">
+					<input type="email" maxlength="50" name="newRegUserEmail" placeholder="E-mail" required>
+				</div>
+				<div class="formReg__row">
+					<input name="newRegUserpassword" type="password" placeholder="Пароль" required>
+				</div>
+				<div class="formReg__row">
+					<input name="newRegUserpasswordRepeat" type="password" placeholder="Повторите пароль" required>
+				</div>
+				<div class="formReg__row">
+					<input name="newRegUserFio" type="text" placeholder="ФИО">
+				</div>
+				<div class="formReg__row formReg__row--last">
+					<button type="submit" class="bnt" form="registration">Зарегистрироваться</button>
+				</div>
+				<div class="formRegFooter">
+					 <dl class="formRegSocial">
+                    	<dt>Войти:</dt>
+                    	<dd>
+                    		<a href="#" title="">
+								<i class="vk-small"></i>
+							</a>
+						</dd>
+						<dd>
+                    		<a href="#" title="">
+								<i class="fb-small"></i>
+							</a>
+						</dd>
+						<dd>
+                    		<a href="#" title="">
+								<i class="google-small"></i>
+							</a>
+						</dd>
+                    </dl>
+				</div>
+			</form>
+		</div>
+
+		<div id="forgotForm" class="formReg">
+			<h3 class="formReg__title">Вход</h3>
+			<p class="formReg__authorize">Авторизируйтесь с помощью соц сетей</p>
+			<ul class="authorizeList">
+				<li>
+					<a href="#" title="">
+						<i class="vk-big"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="">
+						<i class="fb-big"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="">
+						<i class="google-big"></i>
+					</a>
+				</li>
+			</ul>
+			<div class="delimiter"><span>или</span></div>
+			<p class="reestablishPass">Восстановление пароля</p>
+			<form id="reestablish" action="#" method="POST" name="reestablish">
+				<div class="formReg__row">
+					<input type="email" maxlength="50" name="reestablishEmail" placeholder="E-mail" required>
+					<div class="hint">
+						<span class="hint__icon"></span>
+						<div class="hint__desc">E-mail, который вы увазываете при оформлении заказов на obuff.com.ua, является логином для входа на сайт.</div>
+					</div>
+				</div>
+				<div class="formReg__row formReg__row--reestablish">
+					<a class="backPass" href="#formReg" title="">Помню пароль</a>
+					<button type="submit" class="bnt" form="reestablish">Восстановить</button>
+				</div>
+				<div class="formRegFooter">
+					<a class="formRegFooter__link" href="#newRegUser" title="">Регистрация нового пользователя</a>
+				</div>
+			</form>
+		</div>
+
+		<div id="formCart" class="formPop">
+			<form action="#" method="POST">
+				<div class="formPop__title">
+					<h3>Товар добавлен в корзину</h3>
+					<p>Всего в вашей корзине 1 товар. <a href="#" title="">Посмотреть</a></p>
+				</div>
+				<div class="formPop__entry">
+					<ul class="cartList">
+						<li class="cartList__item">
+							<div class="cartList__col1">
+								<div class="cartList__product">
+									<figure>
+										<a href="#" title="">
+											<img src="uploads/139х104-1.jpg" alt="" title="">
+										</a>
+									</figure>
+									<p class="cartList__name">Зимние ботинки Shark B-150 W</p>
+									<p class="cartList__size">Размер: 39 (UKR)</p>
+								</div>
+							</div>
+							<div class="cartList__col2">
+								<p class="cartList__price">1 380 грн.</p>
+								<p class="cartList__ammount">1 шт.</p>
+								<button type="submit" class="bnt bnt--delete">Удалить</button>
+							</div>	
+						</li>
+						<li class="cartList__item">
+							<div class="cartList__col1">
+								<div class="cartList__product">
+									<figure>
+										<a href="#" title="">
+											<img src="uploads/139х104-2.jpg" alt="" title="">
+										</a>
+									</figure>
+									<p class="cartList__name">Зимние ботинки Shark B-150 W</p>
+									<p class="cartList__size">Размер: 39 (UKR)</p>
+								</div>
+							</div>
+							<div class="cartList__col2">
+								<p class="cartList__price">1 380 грн.</p>
+								<p class="cartList__ammount">1 шт.</p>
+								<button type="submit" class="bnt bnt--delete">Удалить</button>
+							</div>	
+						</li>
+					</ul>
+				</div>
+				<div class="formPop__footer">
+					<span class="formPop__action">Продолжить покупки</span>
+					<a class="bnt" href="#" title="">Оформить заказ</a>
+				</div>
+			</form>	
+		</div>
+
+		<div id="letterForm" class="formPop">
+			<form id="letterFormEvent" action="#" method="POST" name="letterFormEvent">
+				<div class="formPop__title">
+					<h3>Отправить сообщение</h3>
+					<p>Как только мы получим ваше сообщение мы с вами свяжемся!</p>
+				</div>
+				<div class="formPop__entry">
+					<div class="formSend">
+						<div class="formSend__row formSend__row--col1">
+							<label for="formSendFio">ФИО</label>
+							<div class="formSend__field">
+								<input type="text" id="formSendFio" name="formSendFio" placeholder="">
+							</div>
+						</div>
+						<div class="formSend__row formSend__row--col2">
+							<label for="formSendPhone">Телефон</label>
+							<div class="formSend__field">
+								<input class="telephone" type="tel" id="formSendPhone" name="formSendPhone" placeholder="+38 (___) ___-__-__">
+							</div>
+						</div>
+						<div class="formSend__row">
+							<div class="formSend__field">
+								<textarea placeholder="Текст сообщения"></textarea>
+							</div>
+						</div>
+						<div class="captcha">
+							<img src="img/captcha" alt="" title="">
+						</div>
+					</div>
+				</div>
+				<div class="formPop__footer">
+					<span class="formPop__action">Я передумал(а) отправлять</span>
+					<button type="submit" class="bnt" form="letterFormEvent">Отправить сообщение</button>
+				</div>
+			</form>	
+		</div>	
+	<!--FOORm SECTION END-->
+
+
+	<!-- ===========================
     NECESSARY SCRIPTS
     =========================== -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -544,8 +763,13 @@
 		<script src="libs/placeholders.min.js"></script>
 		<script src="libs/select2.min.js"></script>
 		<script src="libs/owl.carousel.min.js"></script>
+		<script src="libs/jquery.validate.min.js"></script>
+		<script src="libs/jquery.mask.min.js"></script>
+		<script src="libs/jquery.mousewheel-3.0.6.pack.js"></script>
+		<script src="libs/jquery.fancybox.js"></script>
 	<!-- endbuild -->
+	<script src="js/validate.call.js"></script>
 	<script src="js/main.js"></script>
-
 </body>
 </html>
+
