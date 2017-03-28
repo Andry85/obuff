@@ -731,6 +731,11 @@ a.logo {
 			left: 0;
 			top: 7px;		
 		}
+		&:hover {
+			&:before {
+				background-position: -116px -200px;
+			}
+		}
 	}
 	&__list {
 		dt {
@@ -746,6 +751,11 @@ a.logo {
 			span {
 				color: #828282;
 			}
+		}
+	}
+	a {
+		&:hover {
+			text-decoration: none;
 		}
 	}
 }
@@ -991,14 +1001,28 @@ a.logo {
 		font: {
 			family: 'HelveticaNeueCyr-Bold';
 		}
-		padding: 0 15px 0 0;
+		padding: 0 6px 0 0;
 	}
 	&__item {
 		float: left;
 		font: {
 			family: 'HelveticaNeueCyr-Roman';
 		}
-		padding: 0 22px 0 0;
+		padding: 0 12px 0 0;
+		.chosen-wrap {
+			position: relative;
+			top: -9px;
+		}
+		.select2-container--classic .select2-selection--single {border: 0;}
+		.select2-container--classic .select2-selection--single .select2-selection__rendered {color: #828282;}
+		.select2-container--classic .select2-selection--single .select2-selection__rendered:hover {color: #262626;}
+		.select2-container .select2-selection--single .select2-selection__rendered {padding-right: 30px;}
+		.select2-container--classic .select2-selection--single .select2-selection__arrow b {background-position: -100px -213px;}
+		.select2-container--classic .select2-selection--single:hover .select2-selection__arrow b {background-position: -100px -219px;}
+		.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b {background-position: -100px -207px;}
+		.select2-container--classic.select2-container--open:hover .select2-selection--single .select2-selection__arrow b {background-position: -100px -225px;}
+
+
 	}
 	&__name {
 		padding: 0 21px 0 0;
@@ -1025,7 +1049,7 @@ a.logo {
 
 
 .catalogList {
-	padding: 42px 0 0 0;
+	padding: 24px 0 0 0;
 	&__item {
 		display: inline-block;
 		vertical-align: top;

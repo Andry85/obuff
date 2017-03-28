@@ -781,6 +781,8 @@ a.logo {
     position: absolute;
     left: 0;
     top: 7px; }
+  .tableSize__title:hover:before {
+    background-position: -116px -200px; }
 
 .tableSize__list dt {
   font-family: 'HelveticaNeueCyr-Medium';
@@ -792,6 +794,9 @@ a.logo {
   padding: 3px 0 0 0; }
   .tableSize__list dd span {
     color: #828282; }
+
+.tableSize a:hover {
+  text-decoration: none; }
 
 .listShare {
   padding: 17px 0 0 0; }
@@ -983,11 +988,30 @@ a.logo {
   .filter__title {
     float: left;
     font-family: 'HelveticaNeueCyr-Bold';
-    padding: 0 15px 0 0; }
+    padding: 0 6px 0 0; }
   .filter__item {
     float: left;
     font-family: 'HelveticaNeueCyr-Roman';
-    padding: 0 22px 0 0; }
+    padding: 0 12px 0 0; }
+    .filter__item .chosen-wrap {
+      position: relative;
+      top: -9px; }
+    .filter__item .select2-container--classic .select2-selection--single {
+      border: 0; }
+    .filter__item .select2-container--classic .select2-selection--single .select2-selection__rendered {
+      color: #828282; }
+    .filter__item .select2-container--classic .select2-selection--single .select2-selection__rendered:hover {
+      color: #262626; }
+    .filter__item .select2-container .select2-selection--single .select2-selection__rendered {
+      padding-right: 30px; }
+    .filter__item .select2-container--classic .select2-selection--single .select2-selection__arrow b {
+      background-position: -100px -213px; }
+    .filter__item .select2-container--classic .select2-selection--single:hover .select2-selection__arrow b {
+      background-position: -100px -219px; }
+    .filter__item .select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b {
+      background-position: -100px -207px; }
+    .filter__item .select2-container--classic.select2-container--open:hover .select2-selection--single .select2-selection__arrow b {
+      background-position: -100px -225px; }
   .filter__name {
     padding: 0 21px 0 0;
     position: relative;
@@ -1007,7 +1031,7 @@ a.logo {
         background-position: -100px -219px; }
 
 .catalogList {
-  padding: 42px 0 0 0; }
+  padding: 24px 0 0 0; }
   .catalogList__item {
     display: inline-block;
     vertical-align: top;
