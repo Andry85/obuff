@@ -180,6 +180,36 @@ $(function() {
 	/********************************************************/
 
 
+	/*********************************************************/
+						/* START BXSLIDER  */
+	/********************************************************/
+		$('.bxslider').bxSlider({
+		  pagerCustom: '#bx-pager'
+		});
+		$(".bx-wrapper img").mouseenter(function(e) {
+		  srcPic = $(this).attr('src');
+		  var dataImg = $(this).data("img");
+		  $(this).attr('src', dataImg);
+
+		$(".bx-wrapper img").mouseleave(function() {
+		  $(this).attr('src', srcPic);
+		  $(this).clearQueue();
+		  $(this).animate({left: 0,top: 0},1); 
+		});
+		$('.bx-wrapper img').mousemove(function(e){
+			var offset = $(this).parents(".bx-wrapper").offset();
+    		var parrent_height = $(this).parents(".bx-wrapper").height();
+    		var  x = e.pageX - offset.left;
+			var  y = e.pageY - offset.top;
+			$(this).clearQueue();
+			$(this).animate({left: -x,top: -y},1);
+			});
+		});
+	/*********************************************************/
+						/* END BXSLIDER */
+	/********************************************************/
+
+
 
 	
 

@@ -36,18 +36,14 @@ body {
 	user-select:none;
 	background-image:none;
 	overflow: vissible;
-	&:hover {background: #971212;}
+	&:hover {opacity: 0.8;}
 }
 
 
-		
-		
+
+.wrapper {}
 
 
-.wrapper {
-	
-
-}
 .inner {
 	max-width: 1205px;
 	margin: 0 auto;
@@ -238,7 +234,7 @@ a.logo {
 		height: 32px;
 		text-indent: -9000px;
 		overflow: hidden;
-		&:hover {background: #971212;}
+		&:hover {opacity: 0.8;}
 		&:after {
 			content: "";
 			background: url(../img/mx.png) -400px 0 no-repeat;
@@ -283,27 +279,20 @@ a.logo {
 		}
 	}		
 }
-#slider {
-	.owl-nav {
-	  [class*='owl-'] {top: 170px;}
-	}
-}
+
 
 
  /*
  *  Default theme - Owl Carousel CSS File
  */
 .owl-nav {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
   [class*='owl-'] {
   	width: 60px;
 	height: 60px;
 	position: absolute;
 	text-indent: -9000px;
 	overflow: hidden;
+	top: 50%;
 	&:before {
 		content: "";
 		width: 100%;
@@ -1147,6 +1136,8 @@ a.logo {
 	}
 	&__more:hover,&__more:active,&__more:focus {
 		text-decoration: none;
+		background: #e45555;
+		color: #fff;
 	}
 }
 
@@ -1989,6 +1980,22 @@ label.error {
 	font: {
 		family: 'HelveticaNeueCyr-Roman'; 
 	}
+}
+
+#bx-pager {
+	a {
+		text-align: center;
+		display: inline-block;
+		padding: 6px 0 0 0;
+		border-top: 2px solid #fff;
+		margin-right: 6px;
+		opacity: 0.5;
+	}
+	a.active {
+		border-top-color: #262626;
+		opacity: 1.0;
+	}
+
 }
 
 
