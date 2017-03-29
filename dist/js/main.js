@@ -96,22 +96,6 @@ $(function() {
 	/********************************************************/ 
 
 
-	/*********************************************************/
-						/* Start SORT POPAP  */
-	/********************************************************/
-		$(".sort__text").click(function() {
-		  $(this).next('ul').slideToggle(500);
-		});
-		$( ".sort__it" ).click(function() {
-		  $(this).children("i").show();
-		  $(this).siblings().children("i").hide();
-		  $(this).parent("ul").slideUp(500);
-		  var sortText = $(this).children("span").text();
-		  $(".sort__text" ).text(sortText);
-		});
-	/*********************************************************/
-						/* End SORT POPAP  */
-	/********************************************************/ 
 
 	/*********************************************************/
 						/* Start CATALOG ITEM  */
@@ -186,13 +170,20 @@ $(function() {
 		$('.bxslider').bxSlider({
 		  pagerCustom: '#bx-pager'
 		});
+		var srcPic;
 		$(".bx-wrapper img").mouseenter(function(e) {
 		  srcPic = $(this).attr('src');
 		  var dataImg = $(this).data("img");
-		  $(this).attr('src', dataImg);
 
+		  $(this).hide().attr('src', dataImg);
+		  $(this).load(function() {							  
+				$(this).fadeIn();							 
+		  });
 		$(".bx-wrapper img").mouseleave(function() {
-		  $(this).attr('src', srcPic);
+		  $(this).hide().attr('src', srcPic);
+		  $(this).load(function() {							  
+				$(this).fadeIn();							 
+		  });
 		  $(this).clearQueue();
 		  $(this).animate({left: 0,top: 0},1); 
 		});
