@@ -930,29 +930,8 @@ a.logo {
       .filter__name:hover:before {
         background-position: -100px -219px; }
 
-.chosen-wrap--noBorder .select2-container--classic .select2-selection--single {
-  border: 0; }
-
-.chosen-wrap--noBorder .select2-container--classic .select2-selection--single .select2-selection__rendered {
-  color: #828282; }
-
-.chosen-wrap--noBorder .select2-container--classic .select2-selection--single .select2-selection__rendered:hover {
-  color: #262626; }
-
 .chosen-wrap--noBorder .select2-container .select2-selection--single .select2-selection__rendered {
   padding-right: 30px; }
-
-.chosen-wrap--noBorder .select2-container--classic .select2-selection--single .select2-selection__arrow b {
-  background-position: -100px -213px; }
-
-.chosen-wrap--noBorder .select2-container--classic .select2-selection--single:hover .select2-selection__arrow b {
-  background-position: -100px -219px; }
-
-.chosen-wrap--noBorder .select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b {
-  background-position: -100px -207px; }
-
-.chosen-wrap--noBorder .select2-container--classic.select2-container--open:hover .select2-selection--single .select2-selection__arrow b {
-  background-position: -100px -225px; }
 
 .catalogList {
   padding: 24px 0 0 0; }

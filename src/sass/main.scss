@@ -1012,14 +1012,7 @@ a.logo {
 
 
 .chosen-wrap--noBorder {
-	.select2-container--classic .select2-selection--single {border: 0;}
-	.select2-container--classic .select2-selection--single .select2-selection__rendered {color: #828282;}
-	.select2-container--classic .select2-selection--single .select2-selection__rendered:hover {color: #262626;}
 	.select2-container .select2-selection--single .select2-selection__rendered {padding-right: 30px;}
-	.select2-container--classic .select2-selection--single .select2-selection__arrow b {background-position: -100px -213px;}
-	.select2-container--classic .select2-selection--single:hover .select2-selection__arrow b {background-position: -100px -219px;}
-	.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b {background-position: -100px -207px;}
-	.select2-container--classic.select2-container--open:hover .select2-selection--single .select2-selection__arrow b {background-position: -100px -225px;}
 }
 
 .catalogList {

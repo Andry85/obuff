@@ -74,6 +74,13 @@ $(function() {
 		   minimumResultsForSearch: Infinity
 		});
 
+		$(".chosen-wrap--noBorder .classic-select").select2(
+		{
+			theme: "noBorder",
+			minimumResultsForSearch: Infinity
+		});
+
+
 
     /*********************************************************/
 						/* End CUSTOM SELECT  */
