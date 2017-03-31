@@ -654,7 +654,8 @@ a.logo {
     float: right; }
 
 .productSlider {
-  margin: 5px 0 0 0; }
+  margin: 5px 0 0 0;
+  position: relative; }
 
 .product__title {
   font-family: 'HelveticaNeueCyr-Roman';

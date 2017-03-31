@@ -9,7 +9,7 @@
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
-.bx-wrapper img {
+.bx-wrapper img.activ {
   max-width: none;
   display: block;
   position: absolute;
