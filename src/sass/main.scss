@@ -56,8 +56,14 @@ body {
 		padding: 0 0 27px 0;
 
 	}
-	&__col1 {float: left;}
-	&__col2 {float: right;}
+	&__col1 {
+		float: left;
+		width: 42.57%;
+	}
+	&__col2 {float: left;}
+	&__col3 {float: right;}
+	&__col4 {float: left;}
+	&__col5 {float: right;}
 	&__bottom {
 		background: #f8f8f8;
 		border: 1px solid #f2f2f2;
@@ -164,10 +170,9 @@ a.logo {
 	text-decoration: none;
 	text-indent: -9000px;
 	overflow: hidden;
-	position: absolute;
-	left: 50%;
+	position: relative;
 	top: 15px;
-	margin-left: -89px;
+	display: block;
 }
 
 .nav {}
@@ -2002,11 +2007,6 @@ label.error {
 
 
 
-
-
-
-
-
 /* FOOTER */
 .footer {
 	border-top: 1px solid #f2f2f2;
@@ -2162,18 +2162,37 @@ label.error {
 
 
 /* RESPONSIVE */
-@media only screen and (max-width: 1205px) { 
+@media only screen and (max-width: 1245px) { 
+	.inner {
+		padding: 0 10px;
+	}
 
 
 }
 
 
-@media only screen and (max-width: 1120px) { 
+@media only screen and (max-width: 1125px) { 
+	.catalog .owl-nav [class*="owl-"] {top: 85px;}
 
 
 }
 
 @media only screen and (max-width: 1024px) { 
+
+
+}
+
+@media only screen and (max-width: 991px) {
+	
+	.mainSlider {
+		&__title {
+			font: {
+			    size: 26px;
+			}
+		}
+	}
+
+
 
 
 }

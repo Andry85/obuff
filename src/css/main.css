@@ -179,9 +179,19 @@ body {
   padding: 0 0 27px 0; }
 
 .header__col1 {
-  float: left; }
+  float: left;
+  width: 42.57%; }
 
 .header__col2 {
+  float: left; }
+
+.header__col3 {
+  float: right; }
+
+.header__col4 {
+  float: left; }
+
+.header__col5 {
   float: right; }
 
 .header__bottom {
@@ -271,10 +281,9 @@ a.logo {
   text-decoration: none;
   text-indent: -9000px;
   overflow: hidden;
-  position: absolute;
-  left: 50%;
+  position: relative;
   top: 15px;
-  margin-left: -89px; }
+  display: block; }
 
 .menu__item {
   float: left;
@@ -1833,3 +1842,14 @@ label.error {
   background: #f2720c; }
 
 /* RESPONSIVE */
+@media only screen and (max-width: 1245px) {
+  .inner {
+    padding: 0 10px; } }
+
+@media only screen and (max-width: 1125px) {
+  .catalog .owl-nav [class*="owl-"] {
+    top: 85px; } }
+
+@media only screen and (max-width: 991px) {
+  .mainSlider__title {
+    font-size: 26px; } }

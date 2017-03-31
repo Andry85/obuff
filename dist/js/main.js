@@ -26,6 +26,17 @@ $(function() {
                 margin: 52,
                 nav:true,
                 dots: false,
+                responsive:{
+			        0:{
+			            
+			        },
+			        768:{
+			           margin: 30
+			        },
+			        1024:{ 
+			            
+			        }
+			    }
               });
 	/*********************************************************/
 						/* END CATALOG SLIDER  */
