@@ -71,7 +71,18 @@ $(function() {
                 margin: 48,
                 nav: false,
                 dots: false,
-                autoHeight:true
+                autoHeight:true,
+                responsive:{
+			        0:{
+			            
+			        },
+			        768:{
+			           margin: 30
+			        },
+			        1024:{ 
+			            
+			        }
+			    }
               });
 	/*********************************************************/
 						/* END PARTNERS SLIDER  */
@@ -209,6 +220,13 @@ $(function() {
 	/*********************************************************/
 						/* END BXSLIDER */
 	/********************************************************/
+
+
+	if(!device.desktop()) {	
+		var cabinet = $('.cartWrap__sidebar');
+		cabinet.prependTo('.cartWrap');
+	
+	}
 
 
 

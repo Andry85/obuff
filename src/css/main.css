@@ -1848,8 +1848,84 @@ label.error {
 
 @media only screen and (max-width: 1125px) {
   .catalog .owl-nav [class*="owl-"] {
-    top: 85px; } }
+    top: 85px; }
+  .errorPrompt {
+    width: 200px; } }
 
 @media only screen and (max-width: 991px) {
   .mainSlider__title {
-    font-size: 26px; } }
+    font-size: 26px; }
+  .menu__item {
+    margin-left: 15p; }
+  .menu__link {
+    font-size: 14px; }
+  .searchForm__field[type="text"] {
+    width: 260px; }
+  .topMenu__link {
+    margin-left: 10px; }
+  .benefits__entry h3 {
+    font-size: 15px; }
+  .catalog .owl-nav [class*="owl-"] {
+    top: 55px; }
+  .postambule__box {
+    padding-right: 0; }
+  .sort {
+    clear: both;
+    float: none;
+    margin-top: 38px; }
+    .sort:before, .sort:after {
+      content: "";
+      display: table; }
+    .sort:after {
+      clear: both; }
+  .filter__title {
+    display: none;
+    font-size: 12px;
+    padding: 0; }
+  .filter__item {
+    padding: 0; }
+  .catalogList__item {
+    width: 50%;
+    margin-left: 0; }
+    .catalogList__item:nth-child(3n+1) {
+      margin-left: 0; }
+  .errorPrompt {
+    width: 110px;
+    font-size: 10px; }
+  .cartWrap__page {
+    margin-right: 0; }
+  .cartWrap__sidebar {
+    margin: 0 0 30px 0;
+    width: 100%;
+    clear: both; }
+  .mainForm__row > label {
+    width: 27.23%; }
+  .mainForm__field--colspan {
+    width: 74.38%; }
+  .booking {
+    margin-bottom: 50px; }
+  ul.bxslider li {
+    height: 305px !important; }
+  .product__title {
+    font-size: 17px; }
+  .product__model {
+    top: 0;
+    margin: 10px 0;
+    display: block; }
+  .productWrap {
+    padding-bottom: 100px; }
+  .catalogWrap {
+    margin-bottom: 100px; }
+  .formPop {
+    width: 100%; }
+  .formReg {
+    width: 300px; }
+    .formReg__row--reestablish .bnt {
+      float: right;
+      padding-left: 5px;
+      padding-right: 5px; } }
+
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+  .header__col1 {
+    display: none; } }

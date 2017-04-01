@@ -54,7 +54,6 @@ body {
 .header {
 	&__top {
 		padding: 0 0 27px 0;
-
 	}
 	&__col1 {
 		float: left;
@@ -68,7 +67,6 @@ body {
 		background: #f8f8f8;
 		border: 1px solid #f2f2f2;
 		border-width: 1px 0;
-
 	}
 }
 .topMenu {
@@ -2173,6 +2171,7 @@ label.error {
 
 @media only screen and (max-width: 1125px) { 
 	.catalog .owl-nav [class*="owl-"] {top: 85px;}
+	.errorPrompt {width: 200px;}
 
 
 }
@@ -2191,9 +2190,161 @@ label.error {
 			}
 		}
 	}
+	.menu {
+		&__item {
+			margin-left: 15p;
+		}
+		&__link {
+			font: {
+			    size: 14px;
+			}
+		}
+	}
+
+	.searchForm {
+		&__field[type="text"] {
+			width: 260px;
+		}
+	}
+
+	.topMenu {
+		&__link {
+			margin-left: 10px;
+
+		}
+	}
+
+	.benefits {
+		&__entry {
+			h3 {
+				font-size: 15px;
+			}
+		}
+
+	}
+
+	.catalog .owl-nav [class*="owl-"] {top: 55px;}
+
+	.postambule {
+		&__box {
+			padding-right: 0;
+
+		}
+	}
+
+	.sort {
+		&:before,&:after {content: ""; display: table;}
+		&:after {clear: both;}
+		clear: both;
+		float: none;
+		margin-top: 38px;
+	}
+
+	.filter {
+		&__title {
+			display: none;
+			font: {
+				size: 12px;
+			}
+			padding: 0;
+		}
+		&__item {
+			padding: 0;
+		}
+	}
+
+	.catalogList {
+		&__item {
+			width: 50%;
+			margin-left: 0;
+			&:nth-child(3n+1) {
+				margin-left: 0;
+			}
+
+		}
+	}
+
+	.errorPrompt {
+		width: 110px;
+		font-size: 10px;
+	}
 
 
+	.cartWrap {
+		&__page {
+			margin-right: 0;
+		}
+		&__sidebar {
+		    margin: 0 0 30px 0;
+		    width: 100%;
+		    clear: both;
+		}
+	}
 
+
+	.mainForm {
+		&__row {
+			> label {
+				width: 27.23%;
+			}
+		}
+		&__field {
+			&--colspan {
+				width: 74.38%;
+			}
+		}
+
+	}
+
+	.booking {margin-bottom: 50px;}
+
+	ul.bxslider li {
+	  height: 305px!important; 
+	}
+
+	.product {
+		&__title {
+			font: {
+			    size: 17px;
+			}
+		}
+		&__model {
+			top: 0;
+			margin: 10px 0;
+			display: block;
+		}
+	}
+	.productWrap {padding-bottom: 100px;}
+	.catalogWrap {margin-bottom: 100px;}
+	.formPop {
+		width: 100%;
+	}
+
+	.formReg {
+		width: 300px;
+		&__row {
+			&--reestablish {
+				.bnt {
+					float: right;
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+
+
+}
+
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+	.header {
+		&__col1 {
+			display: none;
+		}
+	}
+	a.logo {}
+	
 
 }
 
