@@ -18,26 +18,27 @@ $(function() {
 
 	/*********************************************************/
 						/* START CATALOG SLIDER  */
-	/********************************************************/
-			$('.catalog-slider').owlCarousel({
-                center: false,
-                items: 3,
-                loop: true,
-                margin: 52,
-                nav:true,
-                dots: false,
-                responsive:{
-			        0:{
-			            
-			        },
-			        768:{
-			           margin: 30
-			        },
-			        1024:{ 
-			            
-			        }
-			    }
-              });
+	/********************************************************/	
+				$('.catalog-slider').owlCarousel({
+	                center: false,
+	                items: 3,
+	                loop: true,
+	                margin: 52,
+	                nav:true,
+	                dots: false,
+	                responsive:{
+				        0:{
+				           margin: 24,
+				           items: 2
+				        },
+				        768:{
+				           margin: 30
+				        },
+				        1024:{ 
+				            
+				        }
+				    }
+	              });
 	/*********************************************************/
 						/* END CATALOG SLIDER  */
 	/********************************************************/
@@ -200,23 +201,26 @@ $(function() {
 		  pagerCustom: '#bx-pager'
 		});
 		
-		$(".bx-wrapper img").mouseenter(function(e) {
-		  $(this).addClass("activ");
-		});
+		if(device.desktop()) {	
 
-		$(".bx-wrapper img").mouseleave(function() {
-		   $(this).removeClass("activ");
-		   $(this).animate({left: 0,top: 0},1); 
-		});
+			$(".bx-wrapper img").mouseenter(function(e) {
+			  $(this).addClass("activ");
+			});
 
-		$('.bx-wrapper img').mousemove(function(e){ 
-			var offset = $(this).parents(".bx-wrapper").offset();
-			var parrent_height = $(this).parents(".bx-wrapper").height();
-			var  x = e.pageX - offset.left;
-			var  y = e.pageY - offset.top;
-			$(this).animate({left: -x,top: -y},1);
-		});
-		
+			$(".bx-wrapper img").mouseleave(function() {
+			   $(this).removeClass("activ");
+			   $(this).animate({left: 0,top: 0},1); 
+			});
+
+			$('.bx-wrapper img').mousemove(function(e){ 
+				var offset = $(this).parents(".bx-wrapper").offset();
+				var parrent_height = $(this).parents(".bx-wrapper").height();
+				var  x = e.pageX - offset.left;
+				var  y = e.pageY - offset.top;
+				$(this).animate({left: -x,top: -y},1);
+			});
+
+		}
 	/*********************************************************/
 						/* END BXSLIDER */
 	/********************************************************/
@@ -230,10 +234,56 @@ $(function() {
 			cabinet.prependTo('.cartWrap');
 		
 		}
-
 	/*********************************************************/
 						/* END VIEW */
 	/********************************************************/
+
+	/*********************************************************/
+						/* START VIEW  */
+	/********************************************************/
+	$(".upLink").on("click", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
+	/*********************************************************/
+						/* END VIEW */
+	/********************************************************/
+
+
+	/*********************************************************/
+						/* START ADAPTIVE  */
+	/********************************************************/
+		if(device.mobile()) {
+	 		
+	 		var nav =  $('.nav');
+	        $('.mainSlider').after(nav);
+		    nav.wrapAll('<div class="mobileNav" />');	
+
+		    
+		    var catalog = $('.mainPage').find(".catalog");
+		    $('.content').after(catalog);	
+		    
+		}
+	/*********************************************************/
+						/* START ADAPTIVE  */
+	/********************************************************/
+
+	
+
+
+
+
+	
+	
 
 
 
