@@ -91,6 +91,7 @@ input[type=color]:hover,
 input[type=email]:hover,
 input[type=search]:hover,
 textarea:hover {border-color: #262626;}
+textarea::placeholder {color: #bcbcbc;}
 
 :focus {outline: 0;}
 

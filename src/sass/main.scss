@@ -2403,6 +2403,7 @@ a.upLink {
 /* Note: Design for a width of 320px */
 @media only screen and (max-width: 767px) {
 	.header {
+		min-height: 112px;
 		background: #f8f8f8;
 		border-bottom: 1px solid #e3e3e3;
 		&__col1 {
@@ -2418,41 +2419,13 @@ a.upLink {
 	a.logo {
 		margin: 11px 0 0 91px;
 	}
-	.order {
-		margin-right: 34px;
-		&__link {
-			font-size: 26px;
-			margin-left: 39px;
-		}
-		&__link--login {
-			padding-left: 59px;
-			&:after {
-				background-position: -300px -48px;
-				width: 37px;
-				height: 36px;
-			}
-			&:hover {
-				&:after {background-position: -200px -48px;}
-			}
-		}
-		&__link--cart {
-			padding-left: 64px;
-			&:after {
-				background-position: -366px 0;
-				width: 34px;
-				height: 36px;
-				top: -4px;
 
-			}
-		}
-		&__counter {
-			width: 28px;
-			height: 28px;
-			line-height: 28px;
-			left: 52px;
-			top: -6px;
+	.order {
+		&__item {
+			margin-top: 55px;
 		}
 	}
+
 	.mainSlider {
 		&__title {
 			padding: 27px 0;
@@ -2591,7 +2564,6 @@ a.upLink {
 			float: none;
 		}
 	}
-	#bx-pager {display: none;}
 	.product {
 		&__title {
 			padding: 20px 0 0 0;
@@ -2675,6 +2647,8 @@ a.upLink {
 		&__col3 {
 			width: 100%;
 			float: none;
+			text-align: left;
+			padding-left: 162px;
 			.bnt {
 				position: static;
 			}
@@ -2799,31 +2773,24 @@ a.upLink {
 		}
 		
 	}
+
+
+	.number {
+		&__ammount {
+			padding: 0;
+			color: #828282;
+		}
+	}
 		
-
-
-
-
 
 }
 
 @media only screen and (max-width: 725px) { 
-	.order {
-		&__item {
-			margin-left: 19px;
-		}
-	}
 	a.logo {margin-left: 55px;}
-	#openPageslide {left: 10px;}
+	#openPageslide {left: 15px;}
 }
 
 @media only screen and (max-width: 680px) { 
-	.order {
-		&__item {
-			margin: 25px 0;
-			float: none;
-		}
-	}
 	.header {
 		&__top {
 			padding-bottom: 0;
@@ -2861,16 +2828,6 @@ a.upLink {
 		width: 118px;
 		height: 42px;
 		margin: 25px 0 0 60px;
-	}
-	.order {
-		margin-right: 14px;
-		&__link {
-			font-size: 20px;
-			margin-left: 0;
-		}
-		&__counter {
-			left: 12px;
-		}
 	}
 	.fMobile {
 		&__phone {
@@ -2932,25 +2889,43 @@ a.upLink {
 	}
 	#openPageslide {top: 48px;}
 
+
+
 }
+
+@media only screen and (max-width: 460px) {
+	.order {
+		margin-right: 2px;
+		&__item {
+			margin-left: 5px;
+		}
+		&__link {
+			font-size: 11px;
+		}
+		&__link--login {
+			padding-left: 22px;
+			&:after {
+				top: -6px;
+			}
+		}
+		&__link--cart {
+			padding-left: 30px;
+			&:after {
+				top: -13px;
+			}
+		}
+	}
+
+}
+
 
 @media only screen and (max-width: 380px) { 
 	a.logo {
-		margin-left: 40px;
+		margin-left: 37px;
 	}
-	.order {
-		margin-right: 5px;
-		&__link {
-			font-size: 18px;
 
-		}
-		&__link--login {
-			padding-left: 44px;
-		}
-		&__link--cart {
-			padding-left: 49px;
-		}
-	}
+	#openPageslide {left: 7px;}
+
 }
 
 

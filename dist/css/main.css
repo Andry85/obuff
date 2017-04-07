@@ -195,6 +195,18 @@ input[type=search]:hover,
 textarea:hover {
   border-color: #262626; }
 
+textarea::-webkit-input-placeholder {
+  color: #bcbcbc; }
+
+textarea::-moz-placeholder {
+  color: #bcbcbc; }
+
+textarea:-ms-input-placeholder {
+  color: #bcbcbc; }
+
+textarea::placeholder {
+  color: #bcbcbc; }
+
 :focus {
   outline: 0; }
 
@@ -2052,6 +2064,7 @@ a.upLink {
 /* Note: Design for a width of 320px */
 @media only screen and (max-width: 767px) {
   .header {
+    min-height: 112px;
     background: #f8f8f8;
     border-bottom: 1px solid #e3e3e3; }
     .header__col1 {
@@ -2062,32 +2075,8 @@ a.upLink {
       display: none; }
   a.logo {
     margin: 11px 0 0 91px; }
-  .order {
-    margin-right: 34px; }
-    .order__link {
-      font-size: 26px;
-      margin-left: 39px; }
-    .order__link--login {
-      padding-left: 59px; }
-      .order__link--login:after {
-        background-position: -300px -48px;
-        width: 37px;
-        height: 36px; }
-      .order__link--login:hover:after {
-        background-position: -200px -48px; }
-    .order__link--cart {
-      padding-left: 64px; }
-      .order__link--cart:after {
-        background-position: -366px 0;
-        width: 34px;
-        height: 36px;
-        top: -4px; }
-    .order__counter {
-      width: 28px;
-      height: 28px;
-      line-height: 28px;
-      left: 52px;
-      top: -6px; }
+  .order__item {
+    margin-top: 55px; }
   .mainSlider__title {
     padding: 27px 0; }
   .owl-nav [class*='owl-'] {
@@ -2171,8 +2160,6 @@ a.upLink {
     .productWrap__col2 {
       width: 100%;
       float: none; }
-  #bx-pager {
-    display: none; }
   .product__title {
     padding: 20px 0 0 0; }
   .product__name {
@@ -2224,7 +2211,9 @@ a.upLink {
     float: none; }
   .basketList__col3 {
     width: 100%;
-    float: none; }
+    float: none;
+    text-align: left;
+    padding-left: 162px; }
     .basketList__col3 .bnt {
       position: static; }
   .orderCart {
@@ -2308,20 +2297,18 @@ a.upLink {
       height: 42px;
       display: block;
       text-indent: -9000px;
-      overflow: hidden; } }
+      overflow: hidden; }
+  .number__ammount {
+    padding: 0;
+    color: #828282; } }
 
 @media only screen and (max-width: 725px) {
-  .order__item {
-    margin-left: 19px; }
   a.logo {
     margin-left: 55px; }
   #openPageslide {
-    left: 10px; } }
+    left: 15px; } }
 
 @media only screen and (max-width: 680px) {
-  .order__item {
-    margin: 25px 0;
-    float: none; }
   .header__top {
     padding-bottom: 0; }
   .mainSlider__title {
@@ -2352,13 +2339,6 @@ a.upLink {
     width: 118px;
     height: 42px;
     margin: 25px 0 0 60px; }
-  .order {
-    margin-right: 14px; }
-    .order__link {
-      font-size: 20px;
-      margin-left: 0; }
-    .order__counter {
-      left: 12px; }
   .fMobile__phone a {
     font-size: 24px; }
   .catalogList__item {
@@ -2394,17 +2374,27 @@ a.upLink {
   #openPageslide {
     top: 48px; } }
 
+@media only screen and (max-width: 460px) {
+  .order {
+    margin-right: 2px; }
+    .order__item {
+      margin-left: 5px; }
+    .order__link {
+      font-size: 11px; }
+    .order__link--login {
+      padding-left: 22px; }
+      .order__link--login:after {
+        top: -6px; }
+    .order__link--cart {
+      padding-left: 30px; }
+      .order__link--cart:after {
+        top: -13px; } }
+
 @media only screen and (max-width: 380px) {
   a.logo {
-    margin-left: 40px; }
-  .order {
-    margin-right: 5px; }
-    .order__link {
-      font-size: 18px; }
-    .order__link--login {
-      padding-left: 44px; }
-    .order__link--cart {
-      padding-left: 49px; } }
+    margin-left: 37px; }
+  #openPageslide {
+    left: 7px; } }
 
 /**
  * Owl Carousel v2.2.1
