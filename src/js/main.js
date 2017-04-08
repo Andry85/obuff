@@ -230,7 +230,7 @@ $(function() {
 	/********************************************************/
 
 		if(!device.desktop()) {	
-			var cabinet = $('.cartWrap__sidebar');
+			var cabinet = $('.js-sidebar');
 			cabinet.prependTo('.cartWrap');
 		
 		}

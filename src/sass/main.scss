@@ -2342,6 +2342,7 @@ a.upLink {
 		    margin: 0 0 30px 0;
 		    width: 100%;
 		    clear: both;
+		    float: none;
 		}
 	}
 
@@ -2395,6 +2396,10 @@ a.upLink {
 				}
 			}
 		}
+	}
+
+	.benefits {
+		display: none;
 	}
 
 
@@ -2468,9 +2473,6 @@ a.upLink {
 	  }
 	}
 
-	.benefits {
-		display: none;
-	}
 	.partners {
 		display: none;
 	}
