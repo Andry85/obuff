@@ -228,12 +228,19 @@ $(function() {
 	/*********************************************************/
 						/* START VIEW  */
 	/********************************************************/
-
-		if(!device.desktop()) {	
-			var cabinet = $('.js-sidebar');
-			cabinet.prependTo('.cartWrap');
-		
-		}
+		$(window).resize(onResize);
+	    onResize();
+	    function onResize() {
+	        var wiw = window.innerWidth;
+	        var cabinet = $('.js-sidebar');
+	        if(wiw < 991) {
+		       cabinet.prependTo('.cartWrap');
+	        }
+	        else
+	        {
+	            cabinet.appendTo('.cartWrap');
+	        }
+	    };
 	/*********************************************************/
 						/* END VIEW */
 	/********************************************************/
