@@ -92,9 +92,7 @@ gulp.task('clean:dist', function(callback){
 gulp.task('default', gulp.parallel('sass', 'browserSync', 'watch'));
 
 
+gulp.task('build', gulp.parallel('clean:dist', 'sass', 'useref', 'images', 'js', 'fonts', 'css', 'uploads'));
 
 
-gulp.task('build', function (callback) {
-  runSequence(['clean:dist', 'sass', 'useref', 'images', 'js', 'fonts', 'css', 'uploads'], callback)
-});
 
