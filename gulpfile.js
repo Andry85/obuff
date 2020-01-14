@@ -27,8 +27,8 @@ gulp.task('sass', function(){
 
 
 
-gulp.task('watch', ['browserSync', 'sass'], function(){
-  gulp.watch('src/sass/**/*.scss', ['sass']); 
+gulp.task('watch', function(){
+  gulp.watch('src/sass/**/*.scss', gulp.parallel('sass')); 
   // Обновляем браузер при любых изменениях в HTML или JS
   gulp.watch('src/*.html', browserSync.reload); 
   gulp.watch('src/js/**/*.js', browserSync.reload);
@@ -89,9 +89,7 @@ gulp.task('clean:dist', function(callback){
   del(['dist/**/*', '!dist/img', '!dist/img/**/*','!dist/fonts', '!dist/fonts/**/*', '!dist/uploads', '!dist/uploads/**/*', '!dist/js', '!dist/js/**/*'], callback)
 });
 
-gulp.task('default', function (callback) {
-  runSequence(['sass', 'browserSync', 'watch'], callback)
-});
+gulp.task('default', gulp.parallel('sass', 'browserSync', 'watch'));
 
 
 
